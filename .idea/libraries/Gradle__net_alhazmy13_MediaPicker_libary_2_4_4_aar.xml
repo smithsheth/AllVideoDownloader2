@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Gradle: net.alhazmy13.MediaPicker:libary:2.4.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/55ff2f5d6cc105cfb0812289a82db956/jetified-libary-2.4.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/55ff2f5d6cc105cfb0812289a82db956/jetified-libary-2.4.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/55ff2f5d6cc105cfb0812289a82db956/jetified-libary-2.4.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/385ee7c382b87fc61ac2435a0569b699/jetified-libary-2.4.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/385ee7c382b87fc61ac2435a0569b699/jetified-libary-2.4.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/385ee7c382b87fc61ac2435a0569b699/jetified-libary-2.4.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c455b57b00637f019aae2f505f1a5ac5/jetified-libary-2.4.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c455b57b00637f019aae2f505f1a5ac5/jetified-libary-2.4.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c455b57b00637f019aae2f505f1a5ac5/jetified-libary-2.4.4/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.alhazmy13.MediaPicker/libary/2.4.4/d450185befdfa55ba19129675660d40f749e71f0/libary-2.4.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.alhazmy13.MediaPicker/libary/2.4.4/56f1f36b943fdb4e826d3ed3ccf2df042b712ae4/libary-2.4.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

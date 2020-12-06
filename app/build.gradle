@@ -1,0 +1,151 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+
+    useLibrary 'org.apache.http.legacy'
+
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.utech.allinonevideodownloader"
+        minSdkVersion 18
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk.abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+
+    }
+
+//    signingConfigs {
+//        config {
+//            keyAlias 'key0'
+//            keyPassword '123456'
+//            storeFile file('keystorevideoapp(alias=key0__pass=123456).jks')
+//            storePassword '123456'
+//        }
+//    }
+
+
+    buildTypes {
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+//        debug {
+//            debuggable true
+//            minifyEnabled true
+//            shrinkResources true
+//            signingConfig signingConfigs.config
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+//        }
+    }
+
+
+
+
+
+
+
+    lintOptions {
+        disable "ResourceType"
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+//Un comment this if you want to genarate 64bit APK File
+//    splits {
+//        abi {
+//            enable true
+//            reset()
+//            include 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+//            universalApk true
+//        }
+//    }
+
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+        implementation 'androidx.appcompat:appcompat:1.2.0'
+        implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+        implementation 'androidx.cardview:cardview:1.0.0'
+
+        implementation 'com.google.firebase:firebase-messaging:21.0.0'
+        testImplementation 'junit:junit:4.13.1'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+        implementation 'com.google.android.material:material:1.2.1'
+        implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+        implementation 'de.hdodenhof:circleimageview:3.1.0'
+        implementation 'org.jsoup:jsoup:1.13.1'
+        implementation 'com.github.bumptech.glide:glide:4.11.0'
+        annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+        implementation 'com.google.android.gms:play-services-ads:19.5.0'
+        implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.6'
+
+        implementation 'androidx.annotation:annotation:1.1.0'
+        implementation 'com.facebook.android:audience-network-sdk:6.+'
+        //TODO youtube comment this
+     //   implementation 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
+
+
+        implementation 'com.amitshekhar.android:android-networking:1.0.2'
+
+
+        implementation 'com.github.AppIntro:AppIntro:5.1.0'
+        implementation 'com.mikepenz:materialdrawer:6.1.2'
+        implementation 'org.apache.commons:commons-lang3:3.10'
+        implementation 'commons-io:commons-io:2.6'
+
+        // implementation 'com.github.geniusforapp:fancyDialog:1.0.2'
+        implementation 'com.turki-alkhateeb:materialcolorpicker:1.0.7'
+        implementation 'io.gloxey.cfv:custom-font-views:1.0.2'
+
+        //live video wallpaper
+        implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+        implementation 'net.alhazmy13.MediaPicker:libary:2.4.4'
+        implementation 'com.github.GrenderG:Toasty:1.4.2'
+
+        //volly
+        implementation 'com.android.volley:volley:1.1.1'
+        implementation 'com.google.android.ads.consent:consent-library:1.0.8'
+
+        implementation 'com.codemybrainsout.rating:ratingdialog:1.0.8'
+
+        //inbuilt player
+
+        implementation 'com.google.android.exoplayer:exoplayer-core:2.11.4'
+        implementation 'com.google.android.exoplayer:exoplayer-dash:2.11.4'
+        implementation 'com.google.android.exoplayer:exoplayer-ui:2.11.4'
+
+
+        implementation 'com.amitshekhar.android:android-networking:1.0.2'
+        // implementation 'com.amitshekhar.android:jackson-android-networking:1.0.2'
+
+        //rest api retrofit
+        implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+        implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+        implementation 'com.squareup.okhttp3:logging-interceptor:4.3.1'
+        implementation 'com.squareup.okhttp3:okhttp:4.3.1'
+
+        implementation 'com.github.KhunHtetzNaing:xGetter:3.0'
+
+
+    }
+}
