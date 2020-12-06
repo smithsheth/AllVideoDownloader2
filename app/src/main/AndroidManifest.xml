@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.video.allvideodownloaderbt">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name="com.video.allvideodownloaderbt.Appcontroller"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_appicon"
+        android:installLocation="preferExternal"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_appicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+
+        <activity android:name="com.video.allvideodownloaderbt.AllSupportedApps" />
+        <activity android:name="com.video.allvideodownloaderbt.GalleryActivity" />
+        <activity
+            android:name="com.video.allvideodownloaderbt.extraFeatures.TikTokWebview"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:hardwareAccelerated="true" />
+
+        <provider
+            android:name="com.video.allvideodownloaderbt.utils.MyFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/AdmobAppId" />
+
+
+        <activity android:name="com.video.allvideodownloaderbt.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.video.allvideodownloaderbt.statussaver.IntroActivityStatusSaver"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name="com.video.allvideodownloaderbt.extraFeatures.videolivewallpaper.MainActivityLivewallpaper"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="net.alhazmy13.mediapicker.Image.ImageActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="net.alhazmy13.mediapicker.Video.VideoActivity"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="com.video.allvideodownloaderbt.extraFeatures.youtubehashtaggenrator.MainActivityHashTag"
+            android:parentActivityName="com.video.allvideodownloaderbt.MainActivity" />
+        <activity android:name="com.video.allvideodownloaderbt.extraFeatures.instagramHashtagGenarator.HelpActivity" />
+        <activity android:name="com.video.allvideodownloaderbt.extraFeatures.instagramHashtagGenarator.MainActivityInstagramHashtag" />
+        <activity android:name="com.video.allvideodownloaderbt.extraFeatures.instagramHashtagGenarator.SettingsActivity" />
+        <activity android:name="com.video.allvideodownloaderbt.extraFeatures.instagramHashtagGenarator.Splash" />
+        <activity android:name="com.video.allvideodownloaderbt.extraFeatures.instagramHashtagGenarator.TagsActivity" />
+        <activity
+            android:name="com.video.allvideodownloaderbt.PlayActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity android:name="com.video.allvideodownloaderbt.RateUsWebView" />
+        <activity
+            android:name="com.video.allvideodownloaderbt.FullImageActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.video.allvideodownloaderbt.InstagramLoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.video.allvideodownloaderbt.TikTokDownloadWebview"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.video.allvideodownloaderbt.extraFeatures.EarningAppWebviewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name="com.video.allvideodownloaderbt.extraFeatures.videolivewallpaper.CinimaWallService"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/config" />
+        </service>
+        <service android:name="com.video.allvideodownloaderbt.services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.video.allvideodownloaderbt.services.ClipboardMonitor"
+            android:exported="false"
+            android:label="Clipboard Monitor"
+            android:stopWithTask="false" />
+
+        <receiver android:name="com.video.allvideodownloaderbt.receiver.Receiver">
+            <intent-filter>
+                <action android:name="quit_action" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.video.allvideodownloaderbt.services.Restarter">
+            <intent-filter>
+                <action android:name="restartservice" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
